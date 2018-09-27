@@ -1,0 +1,31 @@
+{% import 'macros/macros.landing.twig' as landing %}
+{%
+	set info = {
+		'title': 'ДОПОЛНИТЕЛЬНЫЙ<br><span>БОНУС!</span>',
+		'subtitle': '<span class="text-uppercase"><b>Регистрируйся</b> на бесплатный мини-курс — и получи авторский <b>чек-лист</b> от Виталия Бихунова.</span><br><br>Внимательно прочти 10 пунктов — и оцени своё финансовое мышление за <b>60 секунд.</b>'
+	}
+%}
+<section class="bonus">
+	<div class="container">
+		<div class="row bonus__row">
+			<div class="col-12 col-sm-6 col-md-4">
+				<img src="img/bonus-checklist.png" alt="{{info.title|raw}}">
+			</div>
+			<div class="col-12 col-sm-6 col-md-6">
+				{{
+					landing.header(
+						'bonus__header',
+						{
+							"text": info.title,
+							"class": "bonus__title"
+						},
+						{
+							"text": info.subtitle,
+							"class": "bonus__subtitle"
+						}
+					)
+				}}
+			</div>
+		</div>
+	</div>
+</section>
