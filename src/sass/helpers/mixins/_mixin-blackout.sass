@@ -1,0 +1,17 @@
+=blackout($bg, $before: false, $gradient:false, $opacity: 0.7, $fixed: true)
+	+r()
+	+bgi($bg)
+	color: $color-white
+
+	@if $before == true
+		&:before
+			content: ""
+			+a(0, null, null, 0)
+			+size(100%)
+			background-image: $gradient
+			opacity: $opacity
+		
+	@if $fixed == true
+		+min(lg)
+			@media only screen
+				background-attachment: fixed

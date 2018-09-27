@@ -1,0 +1,38 @@
+.section
+	+r()
+	+m-y(50px)
+
+	+min(md)
+		+m-y(75px)
+
+	&__header
+		margin-bottom: 30px
+		+min(sm)
+			margin-bottom: 4.5vmax
+
+	&__title
+		line-height: 1.1
+		text-transform: uppercase
+		font-weight: 100
+		+font('l')
+
+		font-size: 30px
+
+		+min(sm)
+			font-size: 4.2vmax
+
+		&.bold
+			+font('b')
+
+	&__subtitle
+		+font('l')
+		font-size: 16px
+		+min(sm)
+			font-size: 20px
+		+min(lg)
+			font-size: 22px
+
+	&__title + &__subtitle
+		margin-top: 20px
+		+min(md)
+			margin-top: 30px

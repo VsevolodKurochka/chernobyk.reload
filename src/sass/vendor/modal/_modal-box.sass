@@ -1,0 +1,77 @@
+.modal
+	$self: &
+
+	&__box
+		position: relative
+		width: 100%
+		padding: 40px 15px 30px
+		background-color: $color-white
+		box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.25)
+		+transition()
+
+		&_brand-2
+			background-image: linear-gradient( 10deg, rgb(74,56,225) 0%, rgb(34,117,241) 100%)
+
+		&_effect-1
+			opacity: 0
+			transform: scale(0.7)
+
+			#{$self}_showing_in &
+				opacity: 1
+
+		&_effect-2
+			opacity: 0
+			transform: translateX(20%)
+			transition: all 0.3s cubic-bezier(0.25, 0.5, 0.5, 0.9)
+
+			#{$self}_showing_in &
+				opacity: 1
+
+		&_effect-3
+			opacity: 0
+			transform: translateY(20%)
+			transition: all 0.3s cubic-bezier(0.25, 0.5, 0.5, 0.9)
+
+			#{$self}_showing_in &
+				opacity: 1
+
+		&_effect-4
+			opacity: 0
+			transform-style: preserve-3d
+			transform: rotateY(-70deg)
+
+			#{$self}_showing_in &
+				transform: rotateY(0deg)
+				opacity: 1
+
+		&_effect-5
+			opacity: 0
+			transform-style: preserve-3d
+			transform: rotateX(-70deg)
+
+			#{$self}_showing_in &
+				transform: rotateX(0deg)
+				opacity: 1
+
+		#{$self}_showing_in &
+			transform: none
+
+		+min(xs)
+			padding: 48px 24px
+			&_default
+				width: 460px
+
+
+		+min(sm)
+			&_default
+				width: 550px
+				
+			&_small
+				width: 600px
+				margin: 30px auto
+
+
+		+min(md)
+			&_medium
+				width: 900px
+				margin: 30px auto

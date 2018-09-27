@@ -1,0 +1,49 @@
+{% import 'macros/macros.base.twig' as macros %}
+{% extends 'layouts/base.twig' %}
+
+{% block meta %}
+	{% set title = 'БИЗНЕС-РАЗБОРЫ. Запрограммируй себя на приумножение дохода' %}
+	{% set description = '4-недельный практический интенсив от Katana Group и Виталия Бихунова' %}
+	{% set image = 'img/logo.png' %}
+	{% set url = 'url' %}
+	{{ macros.meta(title, description, image, url) }}
+	<link rel="icon" href="img/logo.png">
+{% endblock %}
+
+{% block css %}
+	{{ macros.css('css/style.min.css') }}
+{% endblock %}
+
+{% block js %}
+	{{ macros.js('js/libs.min.js') }}
+	{{ macros.js('js/jquery.main.js') }}
+	{{ macros.js('js/vanilla.main.js') }}
+{% endblock %}
+
+{% block nav %}
+{% endblock %}
+{% block content %}
+	{%
+		set sections = [
+			'greeting',
+			'treners',
+			'happen',
+			'connect-1',
+			'for-who',
+			'about',
+			'connect-2',
+			'activities',
+			'important',
+			'reviews',
+			'speaker',
+			'welcome',
+			'modals'
+		]
+	%}
+	{% for section in sections %}
+		{% include "pages/index/#{section}.twig" %}
+	{% endfor %}
+{% endblock %}
+
+{% block footer %}
+{% endblock %}

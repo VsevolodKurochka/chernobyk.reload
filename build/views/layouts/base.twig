@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	{% block meta %}{% endblock %}
+	{% block css %}{% endblock %}
+	{% block js %}{% endblock %}
+</head>
+<body>
+	{% block nav %}
+		{% include 'blocks/nav.twig' %}
+	{% endblock %}
+	<main class="site">
+		{% block content %}
+			Sorry, no content
+		{% endblock %}
+
+		{% block footer %}
+			<footer class="footer">
+				{% include 'blocks/footer.twig' %}
+			</footer>
+		{% endblock %}
+	</main>
+</body>
+</html>

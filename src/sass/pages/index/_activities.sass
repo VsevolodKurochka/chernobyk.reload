@@ -1,0 +1,39 @@
+.activities
+	+r()
+
+	&__image
+		+max(sm)
+			margin-bottom: 10px
+		+min(sm)
+			+w(40%)
+			+a(null, 0, 0)
+			object-fit: cover
+			max-height: 80%
+
+	&__subtitle
+		span
+			display: inline-block
+			+r()
+			&:after
+				content: "“"
+				+a(-13px, -50px)
+				line-height: 1
+				color: $color-brand-1
+				font-size: 100px
+
+				+min(md)
+					top: -30px
+					right: -90px
+					font-size: 200px
+
+	&__body
+		+min(md)
+			max-width: 80%
+
+	&__content
+		margin-bottom: 30px
+		p
+			+offset('b', 15px)
+
+	&__button
+		width: 100%

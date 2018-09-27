@@ -1,0 +1,31 @@
+.nav
+	+transition()
+
+	&__row
+		justify-content: space-between
+		align-items: center
+
+		+max(md)
+			height: 100%
+
+	+max(md)
+		display: flex
+		align-items: center
+
+		+size(100%, $nav-responsive-height)
+
+		background-color: $color-responsive-menu
+		box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12)
+
+		+ .site
+			margin-top: 56px
+
+		&__conteiner
+			height: 100%
+			flex-basis: 100%
+
+	+min(md)
+		+p-y(15px)
+
+		&_scrolled
+			background-color: $color-black

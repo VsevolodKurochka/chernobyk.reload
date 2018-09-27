@@ -1,0 +1,39 @@
+.reviews
+
+	&__carousel
+		+r()
+
+		.owl-item
+			+r()
+			z-index: 2
+
+		&-item
+			+r()
+			z-index: 2
+
+			+min(sm)
+				width: 60%
+				+m-x(auto)
+
+			&-video
+				width: 100%
+				height: 180px
+				+min(sm)
+					height: 300px
+				+min(lg)
+					height: 400px
+
+		&-nav
+			display: flex
+			justify-content: space-between
+			+a(50%, null, null, 0)
+			transform: translateY(-50%)
+			width: 100%
+
+		&-btn
+			+size(40px)
+			border-radius: 100%
+
+			&.disabled
+				opacity: 0
+				visibility: hidden

@@ -1,0 +1,66 @@
+.about
+	+p-y(60px)
+	+blackout('../img/about-bg.jpg', true, linear-gradient( -133deg, rgb(0,0,0) 0%, rgb(15,15,32) 100%),  0.9)
+
+	+min(md)
+		+p-y(6vmax)
+
+	&__container
+		+min(md)
+			+p-x(90px)
+
+	&__row
+		margin-bottom: 45px
+
+	&-item
+		+max(sm)
+			display: flex
+			flex-wrap: wrap
+			flex-direction: row-reverse
+			justify-content: flex-end
+			align-items: center
+			+offset('b', 30px)
+
+		+min(md)
+			margin-right: 60px
+
+		&__subtitle
+			line-height: 1.1
+			font-size: 18px
+			text-transform: uppercase
+			color: $color-white
+			+max(sm)
+				margin-left: 15px
+			+min(md)
+				font-size: 20px
+				min-height: 50px
+
+		&__number
+			line-height: 1
+			font-size: 70px
+			+font('b')
+			+min(sm)
+				font-size: 140px
+			+min(md)
+				font-size: 170px
+
+		&:nth-child(even) &__number
+			color: $color-brand-1
+
+		&:nth-child(4) &__number
+			+min(md)
+				font-size: 220px
+
+		&__content
+			+max(sm)
+				flex-basis: 100%
+			font-size: 16px
+
+	&__content
+		+font('l')
+		font-size: 14px
+		p
+			+offset('b', 15px)
+
+		+min(md)
+			font-size: 22px

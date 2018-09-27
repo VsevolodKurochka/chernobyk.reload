@@ -1,0 +1,21 @@
+{% import 'macros/macros.landing.twig' as landing %}
+{%
+	set info = {
+		"logo": "../img/logo.png",
+		"title": "Спасибо за регистрацию<br>на курс “Бизнес-Разборы”",
+		"step": "Это был первый, и самый важный шаг на <br>пути к <b>умножению твоего дохода.</b>",
+		"motivation": "Менее 4% людей готовы выйти из зоны <br>комфорта и работать на результат",
+		"order": "100+ выпускников уже достигли <br>поставленной цели. Теперь твоя очередь"
+	}
+%}
+<section class="greeting">
+	<div class="container">
+		<div class="greeting__logo">
+			<img src="{{info.logo}}" alt="{{title|striptags}}">
+		</div>
+		<h1 class="greeting__title greeting__title_thx">{{info.title|raw}}</h1>
+		<h2 class="greeting__subtitle greeting__subtitle_bg"><span>{{info.step|raw}}</span></h2>
+		<h3 class="greeting__subtitle b">{{info.motivation|raw}}</h3>
+		<p class="greeting__order">{{info.order|raw}}</p>
+	</div>
+</section>

@@ -1,0 +1,38 @@
+{% import 'macros/macros.landing.twig' as landing %}
+{%
+	set info = {
+		"title": "<b>СИЛА</b><br>МЫШЛЕНИЯ!",
+		"subtitle": "Основа роста и умножения дохода — наличие правильного <b>финансового мышления</b>",
+		"content": [
+			"Человек с “бедным” мышлением готов потратить $350 на покупку хорошего спортивного костюма, телефона в среднем ценовом сегменте либо 32-дюймового телевизора.",
+			"Человек с “богатым” мышлением ищет способ инвестировать <span class='color-brand-2'><b>$350</b>, чтобы получить <b>$3000</b>.</span>",
+			"КУРС “БИЗНЕС-РАЗБОРЫ”  ПОЗВОЛЯЕТ УЧАСТНИКАМ НЕ ТОЛЬКО ОКУПИТЬ ИНВЕСТИЦИИ, НО И ВЫЙТИ НА ЖЕЛАЕМЫЙ УРОВЕНЬ ФИНАНСОВОЙ ПРИБЫЛИ ЗА УСТАНОВЛЕННЫЙ СРОК — 1 МЕСЯЦ."
+		]
+	}
+%}
+<section class="important">
+	<span class="important__rectangle important__rectangle_1"></span>
+	<span class="important__rectangle important__rectangle_3"></span>
+	<div class="container">
+		{{
+			landing.header(
+				'important__header important__header_thx',
+				{
+					"text": info.title,
+					"class": "important__thx-title"
+				},
+				{
+					"text": info.subtitle,
+					"class": "important__thx-subtitle"
+				}
+			)
+		}}
+		<div class="row">
+			<div class="col-12 col-md-10 col-lg-8 important__content">
+				{% for p in info.content %}
+					<p>{{p|raw}}</p>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+</section>

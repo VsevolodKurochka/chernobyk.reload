@@ -1,0 +1,83 @@
+.greeting
+	+p-y(60px, 150px)
+	+blackout('../img/greeting-bg.jpg', true, linear-gradient( -122deg, rgb(40,83,193) 0%, rgb(30,27,83) 100%), 0.7)
+	text-align: center
+
+	+min(md)
+		padding-bottom: 300px
+
+	&__logo
+		margin-bottom: 30px
+		+min(md)
+			margin-bottom: 60px
+
+	@at-root
+		%greeting-title
+			line-height: 1.1
+			font-weight: normal
+
+	&__subtitle
+		@extend %greeting-title
+		font-size: 20px
+
+		&_uppercase
+			text-transform: uppercase
+
+		&_bg
+			+m-y(30px)
+			+font('l')
+			span
+				padding: 15px
+				display: inline-block
+				background-color: #d54528
+				+min(sm)
+					+p-x(30px)
+
+		+max(sm)
+			br
+				display: none
+
+		+min(md)
+			font-size: 1.85vmax
+
+	&__title
+		@extend %greeting-title
+		
+		+m-y(30px, 15px)
+		+font('b')
+		font-size: 50px
+
+		+min(md)
+			+m-y(60px, 20px)
+			font-size: 5.5vmax
+
+		&_thx
+			font-size: 30px
+			+min(md)
+				font-size: 4vmax
+
+	&__btn
+		&-outer
+			margin-top: 30px
+			+min(md)
+				margin-top: 45px
+
+	&__order
+		padding: 15px
+		margin-top: 30px
+		
+		border-radius: 5px
+		+bgc($color-white)
+		box-shadow: 0px 1px 24px 0px rgba(0, 0, 1, 0.09)
+		
+
+		+font('b')
+		color: $color-black
+		font-size: 20px
+		line-height: 1.2
+
+		+min(sm)
+			+m-x(auto)
+			+p-y(20px)
+			max-width: 65%
+			font-size: 2vmax

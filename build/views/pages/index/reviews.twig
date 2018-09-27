@@ -1,0 +1,38 @@
+{% import 'macros/macros.landing.twig' as landing %}
+{% 
+	set info = {
+		"title": "<b>А ВОТ ЧТО ГОВОРЯТ</b><br>САМИ ВЫПУСКНИКИ",
+		"subtitle": "Посмотрите ниже видео-отзывы наших<br>выпускников и сделайте вывод сами"
+	}
+%}
+{% 
+	set videos = [
+		"gHk4qIgB9c4",
+		"gHk4qIgB9c4",
+		"gHk4qIgB9c4"
+	]
+%}
+<section class="section reviews">
+	<div class="container">
+		{{
+			landing.header(
+				'reviews__header text-center',
+				{
+					"text": info.title,
+					"class": "reviews__title"
+				},
+				{
+					"text": info.subtitle,
+					"class": "reviews__subtitle"
+				}
+			)
+		}}
+		<div class="owl-carousel reviews__carousel" id="reviews-carousel">
+			{% for video in videos %}
+				<div class="reviews__carousel-item">
+					<iframe src="https://www.youtube.com/embed/{{video}}?showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen class="reviews__carousel-item-video"></iframe>
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+</section>

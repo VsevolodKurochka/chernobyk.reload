@@ -1,0 +1,43 @@
+.collapse
+  margin-bottom: 30px
+
+  &__group
+    background-color: #fff
+    box-shadow: 0px 1px 24px 0px rgba(0, 0, 1, 0.09)
+    +transition()
+    +offset('b', 30px)
+
+    &-header
+      padding: 15px
+      +transition()
+      cursor: pointer
+      +min(sm)
+        padding: 25px 15px
+
+      &:hover
+        background-color: transparentize($color-brand-1, 0.9)
+
+    &-title
+      line-height: 1.2
+      +font('b')
+      font-size: 16px
+
+      +min(sm)
+        font-size: 20px
+
+      +min(md)
+        font-size: 22px
+
+    &-body
+      padding: 15px
+      font-size: 16px
+      display: none
+
+      +min(sm)
+        padding: 30px
+    
+    &.active
+      box-shadow: none
+    &.active &
+      &-body
+        box-shadow: 0px 1px 24px 0px rgba(0, 0, 1, 0.09)

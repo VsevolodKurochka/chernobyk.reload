@@ -1,0 +1,62 @@
+{% import 'macros/macros.landing.twig' as landing %}
+{%
+	set items = [
+		{
+			"image": "img/who-1.png",
+			"content": "Бизнес не приносит стабильного дохода: один месяц ты в плюсе, а второй в минусе."
+		},
+		{
+			"image": "img/who-2.png",
+			"content": "Вынашиваешь бизнес-идею, но из-за высоких рисков и отсутствия опыта не решаешься воплотить её в жизнь."
+		},
+		{
+			"image": "img/who-3.png",
+			"content": "Имеешь регулярный доход,  но все попытки брать новые вершины и удвоить его, тщетны."
+		},
+		{
+			"image": "img/who-4.png",
+			"content": "Тестируешь сотни гипотез, которые теоретически могут сделать тебя богаче, но безрезультатно."
+		},
+		{
+			"image": "img/who-5.png",
+			"content": "Из-за постоянных операционных “пожаров” нет времени задумываться о масштабировании"
+		},
+		{
+			"image": "img/who-6.png",
+			"content": "Постепенно теряешь мотивацию, когда твои друзья зарабатывают больше и больше, а у тебя не получается."
+		},
+		{
+			"image": "img/who-7.png",
+			"content": "Хочешь обрести финансовую свободу, чтобы не считать деньги и проводить больше времени с близкими."
+		},
+		{
+			"image": "img/who-8.png",
+			"content": "Постоянно слышишь от знакомых: “Не рискуй. Радуйся тому, что есть”."
+		},
+		{
+			"image": "img/who-9.png",
+			"content": "Чувствуешь, что можешь намного больше, но понятие не имеешь, как этого “большего” достичь."
+		}
+	]
+%}
+<section class="for-who">
+	<div class="container">
+		{{
+			landing.header(
+				'for-who__header',
+				{
+					"text": "ДЛЯ КОГО СОЗДАН<br><b>ЭТОТ ИНТЕНСИВ</b>",
+					"class": "for-who__title"
+				}
+			)
+		}}
+		<div class="row">
+			{% for item in items %}
+				<div class="for-who-item col-12 col-sm-6">
+					<div class="for-who-item__image-cover"><img src="{{item.image}}" alt="{{item.content}}" class="for-who-item__image"></div>
+					<p class="for-who-item__content">{{item.content}}</p>
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+</section>

@@ -1,0 +1,28 @@
+{% import 'macros/macros.landing.twig' as landing %}
+{%
+	set info = {
+		'logo': 'img/logo.png',
+		'title': 'БИЗНЕС-РАЗБОРЫ',
+		'subtitle': '4-недельный практический интенсив <br>от Katana Group и Виталия Бихунова',
+		'motivation': 'Кратное увеличение дохода<br>под наставничеством бизнес-тренеров'
+	}
+%}
+<section class="greeting">
+	<div class="container">
+		<div class="greeting__logo">
+			<img src="{{info.logo}}" alt="{{title}}">
+		</div>
+		<h2 class="greeting__subtitle">{{info.subtitle|raw}}</h2>
+		<h1 class="greeting__title">{{info.title}}</h1>
+		<h3 class="greeting__subtitle greeting__subtitle_uppercase">{{info.motivation|raw}}</h3>
+		<div class="greeting__btn-outer">
+			{{
+				landing.button(
+					'button',
+					'greeting__btn',
+					'Забронировать место'
+				)
+			}}
+		</div>
+	</div>
+</section>

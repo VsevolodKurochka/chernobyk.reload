@@ -1,0 +1,50 @@
+{% import 'macros/macros.landing.twig' as landing %}
+{%
+	set info = {
+		"title": "ОПЛАТА",
+		"subtitle": "ШАГ 2",
+		"price_title": "Стоимость участия — ",
+		"price_old": "$680",
+		"price_new": "$350",
+		"content": [
+			"- Помощь в постановке бизнес-цели.",
+			"- 5 живых встреч с экспертами.",
+			"- Индивидуальные домашние задания.",
+			"- Ежедневная обратная связь от сертифицированных тренеров Катана Групп.",
+			"- Поддержка в тестировании стратегий и достижении целей.",
+			"- Закрытый чат в Telegram",
+		],
+		"footer": "* Оплати участие сейчас<br>и получи бонус",
+		"button": "Оплатить<br><span>по спец.цене $350</span>"
+	}
+%}
+<section class="step">
+	<div class="step__content">
+		<img src="../img/activities-img.jpg" alt="{{info.footer|striptags}}" class="step__image">
+		{{
+			landing.header(
+				'step__header',
+				{
+					"text": info.title,
+					"class": "step__title"
+				},
+				{
+					"text": info.subtitle,
+					"class": "step__subtitle"
+				}
+			)
+		}}
+		<div class="step__body">
+			<p class="step__price">{{info.price_title}} <del>{{info.price_old}}</del> <b>{{info.price_new}}</b></p>
+			<p class="b">Сюда входят:</p>
+			<ul class="step__list list">
+				{% for li in info.content %}
+					<li>{{li}}</li>
+				{% endfor %}
+			</ul>
+			<p class="step__footer">{{info.footer|raw}}</p>
+			<a href="#" class="step__button btn btn_lg btn_shadow btn_brand-1 effect effect_bounce-top">{{info.button|raw}}</a>
+		</div>
+		
+	</div>
+</section>

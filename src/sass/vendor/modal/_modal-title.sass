@@ -1,0 +1,26 @@
+.modal
+	&__title
+		+r()
+		
+		margin-bottom: 20px
+		padding-bottom: 7.5px
+		
+		text-align: center
+		font-size: 16px
+		text-transform: uppercase
+		letter-spacing: 1.5px
+		line-height: 1.2
+		color: $color-white
+
+		font-weight: bold
+
+		&:after
+			content: ''
+			+a(100%, null, null, 50%)
+			+size(25%, 2px)
+			transform: translateX(-50%)
+			background-color: $color-brand-1
+
+		+min(xs)
+			font-size: 18px
+			letter-spacing: 2.5px

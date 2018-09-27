@@ -1,0 +1,18 @@
+
+
+{% macro button(type, class, text, attributes) %}
+	{% import "macros/macros.form.twig" as form %}
+	{% set default = "btn btn_lg btn_shadow btn_brand-1 effect effect_bounce-top" %}
+	{{form.button('button', "#{default} #{class}", text, {'data-action': 'modal', 'data-open': '#modal-form'} ) }}
+{% endmacro %}
+
+{% macro header(headerClass, title, subtitle) %}
+	<div class="section__header {{headerClass}}">
+		{% if title %}
+			<h3 class="section__title {{title.class}}">{{title.text|raw}}</h3>
+		{% endif %}
+		{% if subtitle %}
+			<p class="section__subtitle {{subtitle.class}}">{{subtitle.text|raw}}</p>
+		{% endif %}
+	</div>
+{% endmacro %}

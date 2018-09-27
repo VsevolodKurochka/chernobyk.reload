@@ -1,0 +1,89 @@
+.important
+	+r()
+	+p-y(60px)
+	+blackout('../img/important-bg.jpg', true, linear-gradient( -133deg, rgb(0,0,0) 0%, rgb(15,15,32) 100%),  0.7)
+	background-position: bottom
+	z-index: 1
+	+min(md)
+		+p-y(6vmax)
+
+	&__rectangle
+		+a()
+		z-index: -1
+
+		&_1
+			top: 5vw
+			left: 10vw
+			+rectangle(rgb(234, 245, 252), 0.6, 55vw, 8vw)
+
+		&_2
+			bottom: 25%
+			right: 0
+			+rectangle(rgb(234, 245, 252), 0.3, 75vw, 100px)
+
+		&_3
+			bottom: 10%
+			right: 0
+			+rectangle(rgb(234, 245, 252), 0.3, 50%, 125px)
+
+	&__header
+		+min(md)
+			display: flex
+			align-items: center
+
+			&_thx
+				justify-content: space-between
+
+	&__title
+		line-height: 1
+		+font('b')
+		+min(md)
+			margin-right: 30px
+			font-size: 10.7vmax
+
+	&__title + &__subtitle,
+	&__thx-title + &__thx-subtitle
+		+min(md)
+			margin-top: 0
+
+	&__thx
+		&-title
+			+min(md)
+				font-size: 6vmax
+				b
+					font-size: 120%
+		&-subtitle
+			text-transform: uppercase
+			+min(md)
+				max-width: 50%
+			+min(lg)
+				max-width: 35%
+
+	&__items
+		+min(sm)
+			margin-bottom: 45px
+
+	&-step
+		+max(sm)
+			margin-bottom: 30px
+		&__number
+			color: $color-brand-2
+			+font('b')
+			font-size: 40px
+			+min(md)
+				font-size: 60px
+
+		&__content
+			font-size: 14px
+			+font('l')
+
+			+min(sm)
+				min-height: 120px
+
+	&__content
+		+font('l')
+		+min(md)
+			font-size: 1.5vmax
+		p
+			+offset('b', 30px)
+			

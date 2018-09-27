@@ -1,0 +1,37 @@
+{% import 'macros/macros.landing.twig' as landing %}
+{% import 'macros/macros.form.twig' as form %}
+{% 
+	set info = {
+		"title": "<b>Достигни финансовой цели</b>,которая откладывалась много лет, <b>всего за 1 месяц</b>"
+	}
+%}
+<section class="welcome welcome_2">
+	<div class="container">
+		<div class="row">
+			<div class="col-12 col-sm-6 col-md-6">
+				{{
+					landing.header(
+						'welcome__header',
+						{
+							"text": info.title,
+							"class": "welcome__thx-title"
+						}
+					)
+				}}
+			</div>
+			<div class="hidden visible-md visible-lg col-md-1 col-lg-1"></div>
+			<div class="col-12 col-sm-6 col-md-4">
+				<form action="#" class="form form_white form_block" method="POST">
+					<div class="form__content">
+						{{form.row('text', 'name', 'Ваше ФИО', '../img/icon-avatar.png')}}
+						{{form.row('email', 'email', 'Ваш e-mail', '../img/icon-email.png')}}
+						{{form.row('phone', 'phone', 'Ваш телефон', '../img/icon-phone.png')}}
+						<div class="form__row form__row_submit">
+							{{ form.button('submit', 'form__submit btn btn_lg btn_shadow btn_brand-1 effect effect_bounce-top', 'Оплатить') }}
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</section>
