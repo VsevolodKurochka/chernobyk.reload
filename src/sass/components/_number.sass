@@ -22,3 +22,15 @@
 	&_info &
 		&__content
 			max-width: 175px
+
+	&_after
+		+offset('b', 45px)
+		+min(sm)
+			+offset('b', 75px)
+
+	&_after &
+		&__title
+			+c($color-brand-1)
+			+ff('b')
+		&__content
+			max-width: 175px
