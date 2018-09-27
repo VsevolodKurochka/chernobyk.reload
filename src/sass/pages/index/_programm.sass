@@ -17,14 +17,21 @@
 	&-item
 		+max(sm)
 			+offset('b', 30px)
+
 		@at-root
 			%programm-item-offset
 				+mb(15px)
 				+min(sm)
 					+mb(30px)
+
 		&__header
 			+fs(0)
 			@extend %programm-item-offset
+
+		&__image
+			&_opacity
+				opacity: 0.5
+
 		&__btn
 			+w(100%)
 			+py(15px)

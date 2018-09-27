@@ -10,7 +10,7 @@
 		{
 			"image": "img/pr-1.jpg",
 			"button": "Получить видеокурс",
-			"button_status": true,
+			"status": true,
 			"list": [
 				"- Денежные сценарии: определи свой.",
 				"- Как детство определяет наш будущий достаток.",
@@ -20,7 +20,7 @@
 		{
 			"image": "img/pr-2.jpg",
 			"button": "Получить видеокурс",
-			"button_status": false,
+			"status": false,
 			"list": [
 				"- Образ киногероя: почему мы ждём помощи извне.",
 				"- Лучшие способы избавиться от органичивающих убеждений.",
@@ -30,7 +30,7 @@
 		{
 			"image": "img/pr-3.jpg",
 			"button": "Получить видеокурс",
-			"button_status": false,
+			"status": false,
 			"list": [
 				"- Кейсы учеников: путь к победе и малоизвестные детали.",
 				"- Честная история провала и успеха Виталия Бихунова.",
@@ -40,7 +40,7 @@
 		{
 			"image": "img/pr-4.jpg",
 			"button": "Получить видеокурс",
-			"button_status": false,
+			"status": false,
 			"list": [
 				"- Пошаговый план достижения финансовой цели.",
 				"- Сила окружения единомышленников.",
@@ -65,13 +65,13 @@
 			{% for item in items %}
 				<div class="col-12 col-sm-6 col-md-3 programm-item">
 					<div class="programm-item__header">
-						<img src="{{item.image}}" alt="{{item.button}}">
+						<img src="{{item.image}}" alt="{{item.button}}" class="programm-item__image {{not item.status ? 'programm-item__image_opacity' : ''}}">
 					</div>
 					<div class="programm-item__btn-outer">
 						<button 
 							type="button" 
-							class="btn {{item.button_status ? 'btn_brand-1 btn_shadow' : ''}} effect effect_bounce-top programm-item__btn" 
-							{% if item.button_status %} data-action="modal" data-open="#modal-form" {% else %} disabled="disabled" {% endif %}>Получить видеокурс</button>
+							class="btn {{item.status ? 'btn_brand-1 btn_shadow' : ''}} effect effect_bounce-top programm-item__btn" 
+							{% if item.status %} data-action="modal" data-open="#modal-form" {% else %} disabled="disabled" {% endif %}>Получить видеокурс</button>
 					</div>
 					<div class="programm-item__body">
 						<ul class="programm-item__list">
