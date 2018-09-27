@@ -1,5 +1,3 @@
-
-
 {% macro button(type, class, text, attributes) %}
 	{% import "macros/macros.form.twig" as form %}
 	{% set default = "btn btn_lg btn_shadow btn_brand-1 effect effect_bounce-top" %}
@@ -14,5 +12,12 @@
 		{% if subtitle %}
 			<p class="section__subtitle {{subtitle.class}}">{{subtitle.text|raw}}</p>
 		{% endif %}
+	</div>
+{% endmacro %}
+
+{% macro number(class, title, content) %}
+	<div class="number {{class}}">
+		<p class="number__title">{{title}}</p>
+		<div class="number__content">{{content}}</div>
 	</div>
 {% endmacro %}

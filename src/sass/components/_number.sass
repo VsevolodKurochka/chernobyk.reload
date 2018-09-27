@@ -1,0 +1,24 @@
+.number
+	&__title
+		+fs(45px)
+		+ff('l')
+		line-height: 1
+		margin-bottom: 10px
+		+min(sm)
+			+fs(4vmax)
+
+	&__content
+		+fs(14px)
+
+	&_info
+		+max(sm)
+			+offset('b', 30px)
+		+min(sm)
+			&:nth-child(1),
+			&:nth-child(2),
+			&:nth-child(3)
+				+mb(70px)
+
+	&_info &
+		&__content
+			max-width: 175px

@@ -1,0 +1,43 @@
+.info
+	+r()
+	z-index: 1
+	+my(-120px, 50px)
+
+	+min(md)
+		margin-top: -150px
+
+	&__content
+		+row()
+		+r()
+		+w(95%)
+		+bgc($color-white)
+		margin: 0 auto 45px
+		padding: 30px 15px
+		border-radius: 5px
+		box-shadow: 0px 1px 24px 0px rgba(0, 0, 1, 0.09)
+		z-index: 1
+
+		+min(sm)
+			+py(45px)
+			+ai(flex-end)
+
+		+min(md)
+			padding: 4vmax 6vmax
+
+	&__question
+		+d(flex)
+		+ai(center)
+		+jc(center)
+		+size(200px)
+		border-radius: 100%
+		+bgc($color-brand-1)
+		+c($color-white)
+		+ff('b')
+		line-height: 1
+		box-shadow: -15px 5px 0 0 lighten($color-brand-1, 10%)
+
+		+min(sm)
+			+fs(12vmax)
+
+		+min(lg)
+			+size(250px)

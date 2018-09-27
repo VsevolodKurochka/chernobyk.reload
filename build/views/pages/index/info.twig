@@ -1,0 +1,32 @@
+{% import 'macros/macros.landing.twig' as landing %}
+{%
+	set items = [
+		"Почему одни люди зарабатывают много, а другие пожизненно застревают в рамках “среднего класса?”",
+		"Какие детские установки программируют нас на бедность?",
+		"Почему, имея, стабильный доход, сложно увеличить доход в несколько раз за короткий отрезок времени?",
+		"У каких людей любой стартап всегда будет провальным?",
+		"Почему мы некомфортно чувствуем себя в окружении успешных и обеспеченных людей?"
+	]
+%}
+<section class="info info_negative">
+	<div class="info__content">
+		<div class="col-12 col-sm-8">
+			<div class="row">
+				{% set i = 0 %}
+				{% for item in items %}
+					{% set i = i + 1 %}
+					{{
+						landing.number(
+							"number_info col-12 col-sm-6 col-md-4",
+							"0#{i}",
+							item
+						)
+					}}
+				{% endfor %}
+			</div>
+		</div>
+		<div class="col-12 col-sm-4">
+			<div class="info__question">?</div>
+		</div>
+	</div>
+</section>
