@@ -29,34 +29,6 @@ $(document).ready(function () {
 		collapseInner.children('.collapse__group-body').not($(this).next()).slideUp("slow");
 	});
 
-	$('#treners-carousel').owlCarousel({
-		loop: false,
-		nav: true,
-		items: 1,
-		dots: false,
-		navContainerClass: 'treners__carousel-nav',
-		navClass: ["treners__carousel-btn treners__carousel-btn_prev btn btn_brand-1 effect effect_bounce-bottom", "treners__carousel-btn treners__carousel-btn_next btn btn_brand-1 effect effect_bounce-bottom"],
-		responsive: {
-			1025: {
-				items: 3,
-				margin: 15
-			},
-			1200: {
-				items: 3,
-				margin: 15
-			}
-		}
-	});
-
-	$('#reviews-carousel').owlCarousel({
-		loop: false,
-		nav: true,
-		items: 1,
-		dots: false,
-		navContainerClass: 'reviews__carousel-nav',
-		navClass: ["reviews__carousel-btn reviews__carousel-btn_prev btn btn_brand-1 effect effect_bounce-bottom", "reviews__carousel-btn reviews__carousel-btn_next btn btn_brand-1 effect effect_bounce-bottom"]
-	});
-
 	$('[data-action="modal"]').click(function () {
 		var text = $(this).text();
 		var open = $(this).attr('data-open');
