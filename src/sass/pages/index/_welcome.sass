@@ -1,9 +1,12 @@
 .welcome
-	+py(30px)
+	+r()
+	+py(45px)
+	+my(45px)
 	z-index: 1
 
 	+min(sm)
-		+py(6vmax)
+		+my(5vmax)
+		+py(5vmax)
 	
 	&:after
 		content: ""
@@ -14,7 +17,7 @@
 		z-index: -1
 		+min(sm)
 			bottom: auto
-			+size(48%, 80%)
+			+size(48%, 100%)
 			right: 0
 			top: 0
 	
@@ -50,8 +53,3 @@
 		
 		+min(md)
 			font-size: 24px
-
-	&__thx
-		&-title
-			+min(sm)
-				font-size: 2.5vmax
