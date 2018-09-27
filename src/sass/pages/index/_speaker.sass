@@ -1,25 +1,19 @@
 .speaker
 	+py(30px)
-	+blackout('../img/speaker-bg.jpg', true, linear-gradient( -133deg, rgb(0,0,0) 0%, rgb(15,15,32) 100%),  0.2, false)
-	background-position: bottom
+	+blackout('../img/speaker-bg.jpg', true, linear-gradient( -133deg, rgb(0,0,0) 0%, rgb(15,15,32) 100%),  0.2)
+	background-position: center
 	z-index: 1
 
 	+min(sm)
 		+py(6vmax)
 
-	&:after
-		content: ""
-		+a(null, 0, 0)
-		+size(100%, 25%)
-		background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0),#000)
-		z-index: -1
-
-		+min(md)
-			height: 250px
+	&__header
+		text-align: center
 
 	&__row
 		+min(sm)
 			justify-content: center
+			flex-direction: row-reverse
 
 	&__item
 		font-size: 0
@@ -66,16 +60,3 @@
 			+min(md)
 				margin-top: 45px
 				font-size: 24px
-
-	&__thx
-		&-header
-			color: $color-white
-			+min(md)
-				display: flex
-				align-items: center
-				justify-content: space-around
-
-		&-subtitle
-			text-transform: uppercase
-			+min(md)
-				max-width: 425px
