@@ -24,7 +24,7 @@
 			max-width: 190px
 
 	&_after
-		+offset('b', 45px)
+		+offset('b', 30px)
 		+min(sm)
 			+offset('b', 75px)
 
@@ -33,4 +33,5 @@
 			+c($color-brand-1)
 			+ff('b')
 		&__content
-			max-width: 175px
+			+min(sm)
+				max-width: 175px

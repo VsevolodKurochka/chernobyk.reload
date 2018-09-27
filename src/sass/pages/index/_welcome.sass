@@ -1,8 +1,10 @@
 .welcome
 	+r()
 	+py(45px)
-	+my(45px)
 	z-index: 1
+
+	+max(sm)
+		+c($color-white)
 
 	+min(sm)
 		+my(5vmax)
@@ -11,7 +13,7 @@
 	&:after
 		content: ""
 		+a(null, 0, 0)
-		+size(100%, 415px)
+		+size(100%)
 		background-image: linear-gradient( 10deg, rgb(74,56,225) 0%, rgb(34,117,241) 100%)
 		box-shadow: 0px 1px 24px 0px rgba(0, 0, 1, 0.09)
 		z-index: -1
