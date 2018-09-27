@@ -113,7 +113,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 							videoIframe.setAttribute('allow', 'autoplay; encrypted-media');
 							videoIframe.setAttribute('allowfullscreen', 'allowfullscreen');
 
-							videoWrapper.appendChild(videoIframe);
+							modalCurrent.getElementsByClassName('modal__video')[0].appendChild(videoIframe);
 						}
 					}
 				} else {

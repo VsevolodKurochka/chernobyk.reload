@@ -14,14 +14,35 @@
 	margin-bottom: $bottom
 	margin-left: $left
 
+/// Margin Top
+/// @param {Length} $top [null] - top margin
+=mt($top)
+	margin-top: $top
+
+/// Margin bottom
+/// @param {Length} $bottom [null] - bottom margin
+=mb($bottom)
+	margin-bottom: $bottom
+
+/// Margin right
+/// @param {Length} $right [null] - Right margin
+=mr($right)
+	margin-right: $right
+
+
+/// Margin Top
+/// @param {Length} $left [null] - left margin
+=ml($left)
+	margin-left: $left
+
 /// Margin Horizontal
 /// @param {Length} $right [null] - Right margin
 /// @param {Length} $left [$right] - Left margin
-=m-x($right, $left: $right)
+=mx($right, $left: $right)
 	+m(null, $right, null, $left)
 
 /// Margin Vertical
 /// @param {Length} $top [null] - Top margin
 /// @param {Length} $bottom [$top] - Bottom margin
-=m-y($top, $bottom: $top)
+=my($top, $bottom: $top)
 	+m($top, null, $bottom, null)

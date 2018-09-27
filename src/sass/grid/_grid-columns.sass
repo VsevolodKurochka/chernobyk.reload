@@ -34,10 +34,10 @@ $themeColumn: "col"
 	[class*=#{$themePrefix}#{$themeColumn}-]
 		flex-grow: 0
 		flex-shrink: 0
-		+p-x(getComp(gutter))
+		+px(getComp(gutter))
 @else
 	[class*=#{$themePrefix}#{$themeColumn}-]
 		+r()
 		min-height: 1px
 		float: left
-		+p-x(getComp(gutter))
+		+px(getComp(gutter))

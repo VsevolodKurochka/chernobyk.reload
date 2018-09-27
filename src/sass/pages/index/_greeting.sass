@@ -1,15 +1,19 @@
 .greeting
-	+p-y(60px, 150px)
-	+blackout('../img/greeting-bg.jpg', true, linear-gradient( -122deg, rgb(40,83,193) 0%, rgb(30,27,83) 100%), 0.7)
-	text-align: center
-
+	+py(30px, 150px)
+	+blackout('../img/greeting-bg.jpg', true, linear-gradient( -115deg, rgb(18,80,235) 0%, rgb(12,12,22) 100%), 0.9)
+	+min(sm)
+		+pt(60px)
 	+min(md)
 		padding-bottom: 300px
 
 	&__logo
 		margin-bottom: 30px
 		+min(md)
-			margin-bottom: 60px
+			margin-bottom: 90px
+
+	&__row
+		+min(sm)
+			flex-direction: row-reverse
 
 	@at-root
 		%greeting-title
@@ -19,65 +23,60 @@
 	&__subtitle
 		@extend %greeting-title
 		font-size: 20px
-
-		&_uppercase
-			text-transform: uppercase
-
-		&_bg
-			+m-y(30px)
-			+font('l')
-			span
-				padding: 15px
-				display: inline-block
-				background-color: #d54528
-				+min(sm)
-					+p-x(30px)
+		font-style: italic
 
 		+max(sm)
 			br
 				display: none
 
 		+min(md)
-			font-size: 1.85vmax
+			font-size: 1.5vmax
 
 	&__title
 		@extend %greeting-title
 		
-		+m-y(30px, 15px)
-		+font('b')
-		font-size: 50px
+		+my(30px)
+		+ff('b')
+		font-size: 34px
 
 		+min(md)
-			+m-y(60px, 20px)
-			font-size: 5.5vmax
+			font-size: 2.5vmax
 
-		&_thx
-			font-size: 30px
-			+min(md)
-				font-size: 4vmax
+	&__motivation
+		+ff('l')
+		+fw(100)
+		+fs(17px)
+		+c($color-brand-2)
+		text-transform: uppercase
+
+		+min(sm)
+			+fs(1.5vmax)
 
 	&__btn
 		&-outer
 			margin-top: 30px
-			+min(md)
-				margin-top: 45px
 
-	&__order
-		padding: 15px
-		margin-top: 30px
+	&__column
+		&-video
+			+max(sm)
+				+mb(30px)
+		&-content
+			+min(sm)
+				+mt(60px)
+
+	&__video
 		
-		border-radius: 5px
 		+bgc($color-white)
-		box-shadow: 0px 1px 24px 0px rgba(0, 0, 1, 0.09)
-		
+		+r()
+		+fs(0)
+		border-radius: 5px
+		padding: 5px
 
-		+font('b')
-		color: $color-black
-		font-size: 20px
-		line-height: 1.2
+		&-image
+			+w(100%)
 
-		+min(sm)
-			+m-x(auto)
-			+p-y(20px)
-			max-width: 65%
-			font-size: 2vmax
+		&-btn
+			+a(0, 0)
+			+size(100%)
+			border: none
+			+bgc(transparent)

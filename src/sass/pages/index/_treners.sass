@@ -1,7 +1,7 @@
 .treners
 	+r()
 	z-index: 1
-	+m-y(-120px, 50px)
+	+my(-120px, 50px)
 
 	+min(md)
 		margin-top: -150px
@@ -25,7 +25,7 @@
 
 	&__title
 		font-size: 20px
-		+font('b')
+		+ff('b')
 		margin-bottom: 5px
 
 		+min(sm)
@@ -39,7 +39,7 @@
 
 	&__caption
 		margin-bottom: 10px
-		+font('l')
+		+ff('l')
 		line-height: 1.2
 		font-size: 16px
 
@@ -50,7 +50,7 @@
 			font-size: 22px
 		
 		&_b
-			+font('b')
+			+ff('b')
 
 		&_uppercase
 			text-transform: uppercase
@@ -60,7 +60,7 @@
 				font-size: 24px
 
 	&__number
-		+font('b')
+		+ff('b')
 		color: $color-brand-1
 		font-size: 70px
 		line-height: 1
@@ -85,7 +85,7 @@
 			@extend %treners-rectangle
 
 		+min(sm)
-			+p-y(45px)
+			+py(45px)
 			display: flex
 			flex-wrap: wrap
 			justify-content: center
@@ -103,7 +103,7 @@
 
 	&__carousel
 		+min(sm)
-			+p-x(45px)
+			+px(45px)
 		&-nav
 			display: flex
 			justify-content: space-between
@@ -125,12 +125,12 @@
 		box-shadow: 0px 1px 24px 0px rgba(0, 0, 1, 0.09)
 		+max(md)
 			max-width: 250px
-			+m-x(auto)
+			+mx(auto)
 		+min(md)
 			padding: 40px
 
 		&__name
-			+font('b')
+			+ff('b')
 			text-align: center
 			font-size: 20px
 			margin-bottom: 15px
@@ -148,11 +148,11 @@
 				z-index: -1
 
 		&__content
-			+font('l')
+			+ff('l')
 			font-size: 15px
 
 		&__list
-			+m-y(15px)
+			+my(15px)
 
 			+min(sm)
 				min-height: 40px

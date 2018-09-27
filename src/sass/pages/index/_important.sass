@@ -1,11 +1,11 @@
 .important
 	+r()
-	+p-y(60px)
+	+py(60px)
 	+blackout('../img/important-bg.jpg', true, linear-gradient( -133deg, rgb(0,0,0) 0%, rgb(15,15,32) 100%),  0.7)
 	background-position: bottom
 	z-index: 1
 	+min(md)
-		+p-y(6vmax)
+		+py(6vmax)
 
 	&__rectangle
 		+a()
@@ -36,7 +36,7 @@
 
 	&__title
 		line-height: 1
-		+font('b')
+		+ff('b')
 		+min(md)
 			margin-right: 30px
 			font-size: 10.7vmax
@@ -68,20 +68,20 @@
 			margin-bottom: 30px
 		&__number
 			color: $color-brand-2
-			+font('b')
+			+ff('b')
 			font-size: 40px
 			+min(md)
 				font-size: 60px
 
 		&__content
 			font-size: 14px
-			+font('l')
+			+ff('l')
 
 			+min(sm)
 				min-height: 120px
 
 	&__content
-		+font('l')
+		+ff('l')
 		+min(md)
 			font-size: 1.5vmax
 		p

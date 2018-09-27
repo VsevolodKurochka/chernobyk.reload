@@ -14,14 +14,35 @@
 	padding-bottom: $bottom
 	padding-left: $left
 
+/// Margin Top
+/// @param {Length} $top [null] - top margin
+=pt($top)
+	padding-top: $top
+
+/// padding bottom
+/// @param {Length} $bottom [null] - bottom padding
+=pb($bottom)
+	padding-bottom: $bottom
+
+/// padding right
+/// @param {Length} $right [null] - Right padding
+=pr($right)
+	padding-right: $right
+
+
+/// padding Top
+/// @param {Length} $left [null] - left padding
+=pl($left)
+	padding-left: $left
+
 /// Padding Horizontal
 /// @param {Length} $right [null] - Right padding
 /// @param {Length} $left [$right] - Left padding
-=p-x($right, $left: $right)
+=px($right, $left: $right)
 	+p(null, $right, null, $left)
 
 /// Padding Vertical
 /// @param {Length} $top [null] - Top padding
 /// @param {Length} $bottom [$top] - Bottom padding
-=p-y($top, $bottom: $top)
+=py($top, $bottom: $top)
 	+p($top, null, $bottom, null)

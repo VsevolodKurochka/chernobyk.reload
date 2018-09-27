@@ -2,9 +2,9 @@
 {%
 	set info = {
 		'logo': 'img/logo.png',
-		'title': 'БИЗНЕС-РАЗБОРЫ',
-		'subtitle': '4-недельный практический интенсив <br>от Katana Group и Виталия Бихунова',
-		'motivation': 'Кратное увеличение дохода<br>под наставничеством бизнес-тренеров'
+		'title': 'ДЕНЕЖНАЯ ПРОГРАММА: ПЕРЕЗАГРУЗКА_',
+		'subtitle': 'Бесплатный видеокурс',
+		'motivation': '<strong>Прокачай</strong> убеждения, которые помогут тебе выйти на <strong>желаемый уровень дохода</strong>'
 	}
 %}
 <section class="greeting">
@@ -12,17 +12,28 @@
 		<div class="greeting__logo">
 			<img src="{{info.logo}}" alt="{{title}}">
 		</div>
-		<h2 class="greeting__subtitle">{{info.subtitle|raw}}</h2>
-		<h1 class="greeting__title">{{info.title}}</h1>
-		<h3 class="greeting__subtitle greeting__subtitle_uppercase">{{info.motivation|raw}}</h3>
-		<div class="greeting__btn-outer">
-			{{
-				landing.button(
-					'button',
-					'greeting__btn',
-					'Забронировать место'
-				)
-			}}
+		<div class="row greeting__row">
+			<div class="col-12 col-sm-6 col-md-7 greeting__column-video">
+				<div class="greeting__video">
+					<img src="img/greeting-video.jpg" alt="{{info.title}}" class="greeting__video-image">
+					<button class="greeting__video-btn" data-action="modal" data-open="#modal-video" data-video="https://www.youtube.com/embed/nKMk3q7bHjA"></button>
+				</div>
+			</div>
+			<div class="col-12 col-sm-6 col-md-5 greeting__column-content">
+				<h2 class="greeting__subtitle">{{info.subtitle|raw}}</h2>
+				<h1 class="greeting__title">{{info.title}}</h1>
+				<h3 class="greeting__motivation">{{info.motivation|raw}}</h3>
+				<div class="greeting__btn-outer">
+					{{
+						landing.button(
+							'button',
+							'greeting__btn',
+							'Получить 4 видео'
+						)
+					}}
+				</div>
+			</div>
+			
 		</div>
 	</div>
 </section>

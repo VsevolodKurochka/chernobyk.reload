@@ -1,13 +1,13 @@
 .about
-	+p-y(60px)
+	+py(60px)
 	+blackout('../img/about-bg.jpg', true, linear-gradient( -133deg, rgb(0,0,0) 0%, rgb(15,15,32) 100%),  0.9)
 
 	+min(md)
-		+p-y(6vmax)
+		+py(6vmax)
 
 	&__container
 		+min(md)
-			+p-x(90px)
+			+px(90px)
 
 	&__row
 		margin-bottom: 45px
@@ -38,7 +38,7 @@
 		&__number
 			line-height: 1
 			font-size: 70px
-			+font('b')
+			+ff('b')
 			+min(sm)
 				font-size: 140px
 			+min(md)
@@ -57,7 +57,7 @@
 			font-size: 16px
 
 	&__content
-		+font('l')
+		+ff('l')
 		font-size: 14px
 		p
 			+offset('b', 15px)

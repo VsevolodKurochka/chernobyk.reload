@@ -19,11 +19,11 @@ $themeFormDesign: "new"
 			&__content
 				display: flex
 				justify-content: center
-				+m-x( -getComp(gutter) )
+				+mx( -getComp(gutter) )
 
 			&__row
 				flex: 1
-				+p-x( getComp(gutter) )
+				+px( getComp(gutter) )
 				+offset('r', 15px)
 
 			&__submit
@@ -32,7 +32,7 @@ $themeFormDesign: "new"
 	@if $themeFormDesign == "new"
 		&__control
 			+input-default()
-			+font('l')
+			+ff('l')
 			padding: 15px 45px
 			border: none
 			background-color: transparent
@@ -53,7 +53,7 @@ $themeFormDesign: "new"
 		&__line
 			+a(null, null, 0, 0)
 			+size(0, 2px)
-			+transition()
+			+tr()
 			+bgc($color-brand-1)
 
 		input:focus + &__line

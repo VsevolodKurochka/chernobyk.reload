@@ -7,7 +7,7 @@ $btn-large-padding: 20px 20px
 $btn-large-font-size: 15px
 
 $btn-md-large-padding: 25px 35px
-$btn-md-large-font-size: 17px
+$btn-md-large-font-size: 22px
 
 // Button border
 $btn-border-width: 3px
@@ -28,7 +28,8 @@ $btn-border: ("brand-1": ($color-brand-1, $color-brand-1))
 .btn
 	+btn()
 	+btn-size($btn-padding, $btn-font-size)
-	+font('b')
+	+ff('b')
+	text-transform: uppercase
 
 	&-group &
 		margin: 5px
