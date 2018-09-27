@@ -1,4 +1,10 @@
 .after
+	+r()
+	z-index: 1
+	&__parallax
+		+a(15px, null, null, -10%)
+		z-index: -1
+		opacity: 0.2
 	&__btn
 		+min(md)
 			min-width: 450px

@@ -17,7 +17,7 @@ $(document).ready(function () {
 
 	if ($(window).width() > 1025) {
 		$('.parallax-image').parally({
-			speed: 0.2,
+			speed: 0.4,
 			mode: 'transform'
 		});
 	}

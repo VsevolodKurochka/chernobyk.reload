@@ -1,8 +1,15 @@
 .programm
+	+r()
 	+py(45px)
 	background-color: #f2f8ff
+	z-index: 1
 	+min(sm)
 		+py(5vmax)
+
+	&__parallax
+		+a(-2%, -5%)
+		z-index: -1
+
 	&-item
 		@at-root
 			%programm-item-offset
