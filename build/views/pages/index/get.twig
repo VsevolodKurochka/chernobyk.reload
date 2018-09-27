@@ -1,6 +1,7 @@
 {% import 'macros/macros.landing.twig' as landing %}
 {%
 	set info = {
+		"parallax": 'img/s8.png',
 		"title": "<b>Что ты получишь</b><br> в рамках курса"
 	}
 %}
@@ -17,6 +18,7 @@
 	]
 %}
 <section class="section after">
+	<img src="{{info.parallax}}" alt="{{info.title|raw}}" class="after__parallax parallax-image">
 	<div class="container">
 		{{
 			landing.header(
