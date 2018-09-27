@@ -1,0 +1,44 @@
+.large-video
+	&__row
+		+mb(45px)
+		+min(sm)
+			+mb(60px)
+			+ai(center)
+			+jc(space-between)
+
+	&__header
+		+r()
+		padding: 10px
+		+bgc(transparent)
+		birder-radius: 5px
+		box-shadow: 0px 1px 24px 0px rgba(0, 0, 1, 0.09)
+
+		+fs(0)
+		opacity: 1
+		+tr()
+		&:hover
+			opacity: 0.8
+		&-image
+			+w(100%)
+
+		&-btn
+			+a(0, 0)
+			+size(100%)
+			+bgc(transparent)
+			border: none
+
+	&__list
+		list-style: none
+
+		li
+			+offset('b', 15px)
+
+	&__title
+		+mb(15px)
+		+ff('b')
+		+fs(20px)
+		line-height: 1
+
+		+min(sm)
+			+mb(30px)
+			+fs(2.5vmax)

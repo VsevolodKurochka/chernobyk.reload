@@ -1,0 +1,36 @@
+{%
+	set info = {
+		'video': 'nKMk3q7bHjA',
+		'title': 'Видео 1',
+		"list": [
+			"- Денежные сценарии: определи свой.",
+			"- Как детство определяет наш будущий достаток.",
+			"- Ожидание-реальность: почему ты не живешь жизнью, о которой мечтаешь.",
+		],
+		"link": "#",
+		"link_text": "Скачать чек-лист"
+	}
+%}
+<section class="section large-video">
+	<div class="container">
+		<div class="row large-video__row">
+			<div class="col-12 col-sm-7">
+				<div class="large-video__header">
+					<img src="../img/greeting-video.jpg" alt="{{info.title}}" class="large-video__header-image">
+					<button class="large-video__header-btn" data-action="modal" data-open="#modal-video" data-video="https://www.youtube.com/embed/{{info.video}}"></button>
+				</div>
+			</div>
+			<div class="col-12 col-sm-5 col-md-4">
+				<p class="large-video__title">{{info.title}}</p>
+				<ul class="large-video__list">
+					{% for li in info.list %}
+						<li>{{li}}</li>
+					{% endfor %}
+				</ul>
+			</div>
+		</div>
+		<div class="large-video__footer">
+			<a href="{{info.link}}" class="btn btn_lg btn_shadow btn_brand-1 effect effect_bounce-top">{{info.link_text}}</a>
+		</div>
+	</div>
+</section>
