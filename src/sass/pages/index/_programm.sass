@@ -1,0 +1,29 @@
+.programm
+	+py(45px)
+	background-color: #f2f8ff
+	+min(sm)
+		+py(5vmax)
+	&-item
+		@at-root
+			%programm-item-offset
+				+mb(15px)
+				+min(sm)
+					+mb(30px)
+		&__header
+			+fs(0)
+			@extend %programm-item-offset
+		&__btn
+			+w(100%)
+			+py(15px)
+			&-outer
+				@extend %programm-item-offset
+		
+		&__list
+
+			list-style: none
+			+fs(14px)
+			+min(md)
+				+fs(16px)
+
+			li
+				+offset('b', 15px)

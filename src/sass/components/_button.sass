@@ -30,6 +30,9 @@ $btn-border: ("brand-1": ($color-brand-1, $color-brand-1))
 	+btn-size($btn-padding, $btn-font-size)
 	+ff('b')
 	text-transform: uppercase
+	
+	&[disabled="disabled"]
+		cursor: not-allowed
 
 	&-group &
 		margin: 5px
