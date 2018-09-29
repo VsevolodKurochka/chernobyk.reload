@@ -15,16 +15,13 @@
 						{
 							"text": info.title,
 							"class": "welcome__title"
-						},
-						{
-							"text": info.subtitle,
-							"class": "welcome__subtitle b"
 						}
 					)
 				}}
 			</div>
 			<div class="hidden visible-md visible-lg col-md-1 col-lg-1"></div>
-			<div class="col-12 col-sm-6 col-md-4">
+			<div class="col-12 col-sm-6 col-md-4 welcome__content">
+				<p class="welcome__content-subtitle">Оставьте заявку, чтобы получить видеокурс <b>Бесплатно</b></p>
 				<form action="#" class="form form_white form_block" method="POST">
 					<div class="form__content">
 						{{form.row('text', 'name', 'Ваше ФИО', 'img/icon-avatar.png')}}

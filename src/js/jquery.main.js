@@ -1,5 +1,9 @@
 $(document).ready(function(){
 
+	$.fn.hasAttr = function(name) {  
+		return this.attr(name) !== undefined;
+	};
+
 	function scroll(scrollLink, speed){
 		$('html, body').animate({
 			scrollTop: scrollLink.offset().top
@@ -21,7 +25,7 @@ $(document).ready(function(){
 	}
 
 	$('[data-action="modal"]').click(function(){
-		var text = $(this).text();
+		var text = $(this).hasAttr('data-text') ? $(this).attr('data-text') : $(this).text();
 		var open = $(this).attr('data-open');
 		$(open).find('button[type="submit"]').text(text);
 	});

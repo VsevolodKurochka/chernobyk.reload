@@ -9,7 +9,6 @@
 	set items = [
 		{
 			"image": "img/pr-1.jpg",
-			"button": "Получить видеокурс",
 			"status": true,
 			"list": [
 				"- Денежные сценарии: определи свой.",
@@ -19,7 +18,6 @@
 		},
 		{
 			"image": "img/pr-2.jpg",
-			"button": "Получить видеокурс",
 			"status": false,
 			"list": [
 				"- Образ киногероя: почему мы ждём помощи извне.",
@@ -29,7 +27,6 @@
 		},
 		{
 			"image": "img/pr-3.jpg",
-			"button": "Получить видеокурс",
 			"status": false,
 			"list": [
 				"- Кейсы учеников: путь к победе и малоизвестные детали.",
@@ -39,7 +36,6 @@
 		},
 		{
 			"image": "img/pr-4.jpg",
-			"button": "Получить видеокурс",
 			"status": false,
 			"list": [
 				"- Пошаговый план достижения финансовой цели.",
@@ -71,7 +67,7 @@
 						<button 
 							type="button" 
 							class="btn {{item.status ? 'btn_brand-1 btn_shadow' : ''}} effect effect_bounce-top programm-item__btn" 
-							{% if item.status %} data-action="modal" data-open="#modal-form" {% else %} disabled="disabled" {% endif %}>Получить видеокурс</button>
+							{% if item.status %} data-action="modal" data-open="#modal-form" data-text="Получить видео" {% else %} disabled="disabled" {% endif %}>Смотреть видео</button>
 					</div>
 					<div class="programm-item__body">
 						<ul class="programm-item__list">
