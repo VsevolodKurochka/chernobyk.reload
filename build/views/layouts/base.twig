@@ -6,6 +6,8 @@
 	{% block js %}{% endblock %}
 </head>
 <body>
+  {% block afterBody %}
+  {% endblock %}
 	{% block nav %}
 		{% include 'blocks/nav.twig' %}
 	{% endblock %}
