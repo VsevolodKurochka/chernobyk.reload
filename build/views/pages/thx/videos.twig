@@ -2,28 +2,52 @@
 	set items = [
 		{
 			"image": "../img/thx-video-1.jpg",
-			"text": "Видео 2"
+			"text": "Видео 2",
+			"status": "active",
+			"video": "ct15n6_ppmY"
 		},
 		{
 			"image": "../img/thx-video-2.jpg",
-			"text": "Видео 3"
+			"text": "Видео 3",
+			"status": "disable"
 		},
 		{
 			"image": "../img/thx-video-3.jpg",
-			"text": "Видео 4"
+			"text": "Видео 4",
+			"status": "disable"
 		}
 	]
 %}
 <section class="section videos">
 	<div class="container">
 		<div class="row">
+			{% set i = 0 %}
 			{% for item in items %}
-				<div class="col-12 col-sm-4 videos-item">
+				{% set i = i + 1 %}
+				<div class="col-12 col-sm-4 videos-item videos-item_{{item.status}}">
 					<div class="videos-item__header">
 						<img src="{{item.image}}" alt="{{item.text}}" class="videos-item__image">
+						{% if item.status == 'active' %}
+							<button class="videos-item__btn" data-action="modal" data-open="#modal-videos-{{i}}" data-video="https://www.youtube.com/embed/{{item.video}}"></button>
+						{% endif %}
 					</div>
 					<p class="videos-item__title">{{item.text}}</p>
+					{% if item.status == 'disable' %}
+						<p class="videos-item__subtitle">Ссылка на видео в следующем письме</p>
+					{% endif %}
 				</div>
+				{% if item.status == 'active' %}
+					<div class="modal" id="modal-videos-{{i}}">
+						<div class="modal__box modal__box_transparent modal__box_medium modal__box_effect-2 ">
+							<div class="modal__header">
+								<button class="modal__close modal__close_white" data-close="modal">&times;</button>
+							</div>
+							<div class="modal__body">
+								<div class="modal__video"></div>
+							</div>
+						</div>
+					</div>
+				{% endif %}
 			{% endfor %}
 		</div>
 	</div>

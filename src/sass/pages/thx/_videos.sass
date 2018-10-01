@@ -2,11 +2,26 @@
 	&-item
 		+max(sm)
 			+offset('b', 30px)
+
 		&__header
-			margin-bottom: 15px
-		&__image
+			+r()
+			+fs(0)
+			+mb(15px)
+
+		&_disable &__image
 			opacity: 0.5
 			filter: blur(8px)
+		
+		&__btn
+			+a(0, 0)
+			+size(100%)
+			+bgc(transparent)
+			border: none
+			+tr()
+
+			&:hover
+				+bgc(transparentize($color-brand-1, 0.8))
+
 		&__title
 			+fs(20px)
 			line-height: 1
@@ -15,3 +30,9 @@
 			+ff('l')
 			+min(sm)
 				+fs(4vmax)
+
+		&__subtitle
+			+fs(17px)
+			+lh(1.1)
+			+mt(15px)
+			+c($color-brand-1)
