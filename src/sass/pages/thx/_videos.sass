@@ -7,6 +7,7 @@
 			+r()
 			+fs(0)
 			+mb(15px)
+			+tr()
 
 		&_disable &__image
 			opacity: 0.5
@@ -19,8 +20,8 @@
 			border: none
 			+tr()
 
-			&:hover
-				+bgc(transparentize($color-brand-1, 0.8))
+		&_active:hover &__header
+			opacity: 0.8
 
 		&__title
 			+fs(20px)
