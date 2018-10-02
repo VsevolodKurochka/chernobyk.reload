@@ -27,14 +27,15 @@
 				<div class="col-12 col-sm-4 videos-item videos-item_{{item.status}}">
 					<div class="videos-item__header">
 						<img src="{{item.image}}" alt="{{item.text}}" class="videos-item__image">
+						{% if item.status == 'disable' %}
+							<p class="videos-item__subtitle">Ссылка на видео в следующем письме</p>
+						{% endif %}
 						{% if item.status == 'active' %}
 							<button class="videos-item__btn" data-action="modal" data-open="#modal-videos-{{i}}" data-video="https://www.youtube.com/embed/{{item.video}}"></button>
 						{% endif %}
 					</div>
 					<p class="videos-item__title">{{item.text}}</p>
-					{% if item.status == 'disable' %}
-						<p class="videos-item__subtitle">Ссылка на видео в следующем письме</p>
-					{% endif %}
+					
 				</div>
 				{% if item.status == 'active' %}
 					<div class="modal" id="modal-videos-{{i}}">
